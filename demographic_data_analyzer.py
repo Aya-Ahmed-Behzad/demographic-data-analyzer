@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def calculate_demographic_data(print_data=True):
     # Read data from file
     
@@ -66,8 +65,6 @@ def calculate_demographic_data(print_data=True):
     # Identify the most popular occupation for those who earn >50K in India.
     occ= df.loc[(df['salary']  == ">50K")&(df['native-country']=='India'),'occupation'].value_counts()
     top_IN_occupation = occ.index[0]
-
-    # DO NOT MODIFY BELOW THIS LINE
 
     if print_data:
         print("Number of each race:\n", race_count) 
