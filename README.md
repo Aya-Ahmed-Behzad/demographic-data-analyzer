@@ -43,17 +43,20 @@ pip install pandas
 ```
 
 ## Project Structure
-- `demographic_data_analyzer.py`: Contains the main code for analyzing the dataset and answering the questions listed above.
+- `demographic_data_analyzer.py`: Contains the main code for analyzing the dataset and answering the questions listed above in a function.
 - `adult.csv`: The CSV file containing the demographic data extracted from the 1994 U.S. Census database.
 - `README.md`: Project documentation (this file).
+- `requirements.txt`: required dependencies for the project.
+ - `test_module.py`:contains the unit tests for this project.
+ - `main.py`: used to test the code. It contains imported tests from test_module.py, and the function call "calculate_demographic_data()" from `demographic_data_analyzer.py`.
 ## Usage
 
 After downloading the dataset file 'adult.csv' that contains the demographic data needed for this analysis. This file should be placed in the same directory as demographic_data_analyzer.py.
 
-To run the Analysis, run the Python script demographic_data_analyzer.py to perform the analysis.
+To run the Analysis, run the Python script main.py to perform the analysis and run the unit tests.
 
 ```bash
-python3 demographic_data_analyzer.py
+python3 main.py
 ```
 
 The script will **output** the answers to each of the questions directly in the terminal, **rounded** to the nearest tenth. Each answer corresponds to a specific question, such as the number of people of each race, the average age of men, the percentage of people earning more than 50K, etc.
